@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.divCart{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.divCartImg{
+    width: 100px;
+    height: 100px;
+}
