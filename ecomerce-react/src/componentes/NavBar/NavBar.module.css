@@ -1,18 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-.logo {
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navLogo {
     color: black;
     font-family: 'Poppins', sans-serif;
-    text-align: center;
 }
 
 .divBtnNav{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    gap: 10px;
 }
 
 .btnNav {
     background-color: antiquewhite;
+    border: 2.5px antiquewhite solid;
     color: black;
     border-radius: 3px;
     padding: 5px;
@@ -21,4 +29,15 @@
     font-family: 'Poppins', sans-serif;
     align-items: center;
     cursor: pointer;
+}
+
+.btnNav:hover {
+    background-color: #fff;
+    border-bottom: 2px solid antiquewhite;
+    transition: 0.4s;
+}
+
+.btnNavA{
+    text-decoration: none;
+    color: black;
 }

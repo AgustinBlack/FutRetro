@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+.div{
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    width: 100px;
+    height: 10px;
+    border-radius: 3px;
+}
+
+.divBtn{
+    background-color: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.divBtn:hover{
+    background-color: rgb(27, 26, 26);
+    color: white;
+    transition: 0.5s;
+}
+
+.divCount{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.parrafo{
+    font-family: "Poppins", sans-serif;
+}
+
+.divBtnCart{
+    font-family: "Poppins", sans-serif;
+    border: 1.6px solid rgb(64, 90, 139);
+    background-color: #fff;
+    border-radius: 5px;
+    color: black;    
+    padding: 3px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.divBtnCart:hover{
+    background-color: rgb(64, 90, 139);
+    color: #fff;
+    transition: 0.5s;
+}
