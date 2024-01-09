@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.divPadre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .div{
     font-family: "Poppins", sans-serif;
     display: flex;
@@ -34,13 +41,14 @@
 
 .divBtnCart{
     font-family: "Poppins", sans-serif;
-    border: 1.6px solid rgb(64, 90, 139);
+    border: none;
     background-color: #fff;
     border-radius: 5px;
     color: black;    
     padding: 3px;
     cursor: pointer;
     margin-top: 5px;
+    width: 190px;
 }
 
 .divBtnCart:hover{

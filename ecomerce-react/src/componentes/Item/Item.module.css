@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.titulo{
+    text-align: center;
+}
+
+.div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.divItem{
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.divItem:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-2%);
+    transition: all ease 0.4s;
+}
+
+.divItemImg{
+    width: 220px;
+    height: 220px;
+    border-radius: 5px;
+}
+
+.divItemInfo{
+    padding: 10px;
+}
+
+.divItemTalles{
+    font-size: small;
+}
+
+.divItemStock{
+    font-size: small;
+}
+
+.divItemCount{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

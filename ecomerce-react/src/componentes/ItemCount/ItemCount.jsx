@@ -11,21 +11,20 @@ const ItemCount = () => {
     }
 
     const decrementar = () => {
-        if (count > 1) {
+        if (count > 0) {
             setCount(count - 1)
         }
     }
 
     return (
         <>
-            <div>
+            <div className={clases.divPadre}>
                 <div className={clases.div}>
                     <button onClick={decrementar} className={clases.divBtn}>-</button>
                     <h3 className={clases.divCount}>{count}</h3>
                     <button onClick={incrementar} className={clases.divBtn}>+</button>
                 </div>
                 <button className={clases.divBtnCart}>Agregar al carrito</button>
-                <p className={clases.parrafo}>Contador solo usando useState</p>
             </div>
         </>
     )
