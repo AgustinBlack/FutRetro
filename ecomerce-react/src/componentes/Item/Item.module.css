@@ -17,7 +17,8 @@
 
 .divItem{
     box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
-    border-radius: 5px;
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
 .divItem:hover{
@@ -30,6 +31,16 @@
     width: 220px;
     height: 220px;
     border-radius: 5px;
+}
+
+.divItemNombre{
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+.divItemCat{
+    margin-top: 13px;
+    margin-bottom: 13px;
 }
 
 .divItemInfo{
@@ -48,4 +59,31 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.divItemDetallesPadre{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.divItemDetallesPadre:hover{
+    background-color: rgb(64, 90, 139);
+    color: #fff;
+    transition: 0.5s;
+}
+
+.divItemDetalles{
+    text-decoration: none;
+    color: black;
+    font-size: smaller;
+}
+
+.divItemDetalles:hover{
+    color: #fff;
+    transition: 0.5s;
 }

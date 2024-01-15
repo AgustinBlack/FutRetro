@@ -1,0 +1,33 @@
+.divItemDetailPadre{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.divItemDetail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    width: 60%;
+}
+
+.divItemDetailImg{
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.divItemDetailInfo{
+    margin: 0px 20px;
+}
+
+.divItemDetailDesc{
+    font-size: smaller;
+}
+
+.divItemDetailPrecio{
+    margin: 10px 0px;
+}

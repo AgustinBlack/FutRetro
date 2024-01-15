@@ -9,6 +9,7 @@
 .navLogo {
     color: black;
     font-family: 'Poppins', sans-serif;
+    border-bottom: 2px solid black;
 }
 
 .divBtnNav{
@@ -28,15 +29,18 @@
     font-family: 'Poppins', sans-serif;
     align-items: center;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-size: small;
 }
 
 .btnNav:hover {
     background-color: #fff;
     border-bottom: 2px solid antiquewhite;
-    transition: 0.4s;
+    transition: ease-in 0.5s;
 }
 
-.btnNavA{
+.divLink{
     text-decoration: none;
     color: black;
 }

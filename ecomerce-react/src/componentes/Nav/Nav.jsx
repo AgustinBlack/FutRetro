@@ -1,15 +1,15 @@
 import clases from "./Nav.module.css"
+import { Link } from "react-router-dom"
 
 const Nav = () => {
     return (
         <>
-            <h1 className={clases.navLogo}>FutClothes</h1>
+            <Link to='/' className={clases.divLink}><h1 className={clases.navLogo}>FutClothes</h1></Link>
             <div className={clases.divBtnNav}>
-                <button className={clases.btnNav}><a className={clases.btnNavA} href="#">Inicio</a></button> 
-                <button className={clases.btnNav}><a className={clases.btnNavA} href="#">Remeras</a></button>
-                <button className={clases.btnNav}><a className={clases.btnNavA} href="#">Pantalones</a></button>
-                <button className={clases.btnNav}><a className={clases.btnNavA} href="#">Conjuntos</a></button>
-                <button className={clases.btnNav}><a className={clases.btnNavA} href="#">Contacto</a></button>
+                <Link to='/categoria/Remera' className={clases.btnNav}>Remeras</Link>
+                <Link to='/categoria/Pantalon' className={clases.btnNav}>Pantalones</Link>
+                <Link to='/categoria/Conjunto' className={clases.btnNav}>Conjunto</Link>
+                <Link to='/categoria/Contacto' className={clases.btnNav}>Contacto</Link>
             </div>  
         </>
     )
