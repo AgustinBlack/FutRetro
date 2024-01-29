@@ -1,7 +1,7 @@
 import clases from "./ItemCount.module.css"
 import { useCount } from "../../Hooks/useCount"
 
-const ItemCount = () => {
+const ItemCount = ({onAdd}) => {
     const {count, decrementar, incrementar} = useCount(1,0,10)
 
     return (
@@ -11,7 +11,7 @@ const ItemCount = () => {
                 <h3 className={clases.divCount}>{count}</h3>
                 <button onClick={incrementar} className={clases.divBtn}>+</button>
             </div>
-            <button className={clases.divBtnCart}>Agregar al carrito</button>
+            <button className={clases.divBtnCart} onClick={() => onAdd(count)} >Agregar al carrito</button>
         </div>
     )
 }

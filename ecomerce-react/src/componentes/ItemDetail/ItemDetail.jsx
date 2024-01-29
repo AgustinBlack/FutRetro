@@ -1,7 +1,7 @@
 import clases from './ItemDetail.module.css'
 import ItemCount from '../ItemCount/ItemCount'
 
-const ItemDetail = ({nombre, talles, precio, categoria, img, stock, descripcion}) => {
+const ItemDetail = ({nombre, talles, precio, categoria, img, stock}) => {
     return (
         <div className={clases.divItemDetail}>
             <img className={clases.divItemDetailImg} src={img} alt=""/>                
@@ -10,7 +10,6 @@ const ItemDetail = ({nombre, talles, precio, categoria, img, stock, descripcion}
                 <h4>{categoria}</h4>
                 <h5>{talles}</h5>
                 <h5>Stock: {stock}</h5>
-                <p className={clases.divItemDetailDesc}>{descripcion}</p>
                 <h4 className={clases.divItemDetailPrecio}>${precio}</h4>
                 <ItemCount/>
             </div>
