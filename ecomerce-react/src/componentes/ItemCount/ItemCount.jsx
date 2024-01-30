@@ -1,7 +1,7 @@
 import clases from "./ItemCount.module.css"
 import { useCount } from "../../Hooks/useCount"
 
-const ItemCount = ({onAdd}) => {
+const ItemCount = ({ onAdd, prod }) => {
     const {count, decrementar, incrementar} = useCount(1,0,10)
 
     return (

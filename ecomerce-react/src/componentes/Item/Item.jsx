@@ -11,9 +11,6 @@ const Item = ({ id, nombre, precio, img, stock }) => {
                 <h3 className={clases.divItemNombre}>{nombre}</h3>
                 <p>${precio}</p>
                 <p className={clases.divItemStock}>Stock: {stock}</p>
-                <div className={clases.divItemCount}>
-                    <ItemCount/> 
-                </div>
                 <div className={clases.divItemDetallesPadre}>
                     <Link to={`/detail/${id}`} className={clases.divItemDetalles}>Ver detalle</Link>                    
                 </div>
