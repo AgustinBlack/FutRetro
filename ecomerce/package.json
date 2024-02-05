@@ -11,9 +11,12 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "firebase": "^10.8.0",
+    "node": "^21.6.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.21.2"
+    "react-router-dom": "^6.21.2",
+    "sweetalert2": "^11.10.5"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

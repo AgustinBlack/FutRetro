@@ -1,8 +1,19 @@
 import clases from "./ItemCount.module.css"
-import { useCount } from "../../Hooks/useCount"
+import { useState } from "react"
 
-const ItemCount = ({ onAdd, prod }) => {
-    const {count, decrementar, incrementar} = useCount(1,0,10)
+const ItemCount = ({ initial = 1, stock, onAdd }) => {
+    const [count, setCount] = useState(initial)
+    
+    const decrementar = () => {
+        if(count > 1) {
+            setCount(prev => prev - 1)
+        }
+    }
+
+    const incrementar = () => {
+        if(count < stock)
+            setCount(prev => prev + 1)
+        }
 
     return (
         <div className={clases.divPadre}>

@@ -1,20 +1,14 @@
 import clases from "./CartWidget.module.css"
 import carrito from "./assets/cart.png"
-import Cart from "../Cart/Cart"
 import { useCart } from "../../context/CartContent"
+import { Link } from "react-router-dom" 
 
 const CartWidget = () => {
     const { totalQuantity } = useCart()
 
-    const cart = () => {
-        return (
-            <Cart/>
-        )
-    }
-
     return (
         <div className={clases.divCart}>
-            <img className={clases.divCartImg} src={carrito} alt="carrito" onClick={cart}/>
+            <Link to={'/Cart'}><img className={clases.divCartImg} src={carrito} alt="carrito"/></Link>
             {totalQuantity}
         </div>
     )
