@@ -40,7 +40,7 @@ const Cart = () => {
             <div className={clases.footerCart}>
                 <p>Total de la compra: ${total}</p>
                 <Link className={clases.btnSeguirCompra} to={'/'}>Seguir Comprando</Link>
-                <Link to={"/Checkout"}>Checkout</Link>
+                <Link className={clases.btnCheckout} to={"/Checkout"}>Checkout</Link>
                 <button className={clases.deleteItem} onClick={() => clearCart()}><img src={vaciar} alt="delete"/></button>         
             </div>
         </div>

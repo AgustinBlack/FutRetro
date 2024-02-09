@@ -52,7 +52,10 @@ const ItemDetail = ({id ,nombre, talles, precio, categoria, img, stock}) => {
                     quantity === 0 ? (
                         <ItemCount stock={stock} onAdd={handleOnAdd}/>  
                     ) : (
-                        <Link to={'/Cart'}>Finalizar compra</Link>
+                        <div className={clases.divBtnComprar}>
+                            <Link className={clases.btnComprar} to={'/Cart'}>Finalizar compra</Link>                            
+                        </div>
+
                     )
                 }
             </div>

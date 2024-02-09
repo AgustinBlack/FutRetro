@@ -31,3 +31,23 @@
 .divItemDetailPrecio{
     margin: 10px 0px;
 }
+
+.divBtnComprar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 40px;
+    padding: 5px;
+}
+
+.btnComprar{
+    text-decoration: none;
+    color: black;
+}
+
+.divBtnComprar:hover{
+    background-color: antiquewhite;
+    transition: 0.5s;
+    border-radius: 5px;
+}
