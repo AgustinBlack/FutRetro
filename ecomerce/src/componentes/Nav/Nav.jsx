@@ -9,7 +9,6 @@ const Nav = () => {
                 <Link to='/categoria/Remera' className={clases.btnNav}>Remeras</Link>
                 <Link to='/categoria/Pantalon' className={clases.btnNav}>Pantalones</Link>
                 <Link to='/categoria/Conjunto' className={clases.btnNav}>Conjunto</Link>
-                <Link to='/categoria/Contacto' className={clases.btnNav}>Contacto</Link>
             </div>  
         </>
     )

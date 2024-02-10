@@ -1,15 +1,14 @@
 import clases from './ItemDetail.module.css'
 import ItemCount from '../ItemCount/ItemCount'
+import Swal from 'sweetalert2'
 import { useState } from 'react'
 import { useCart } from '../../context/CartContent'
 import { Link } from 'react-router-dom'
-import Swal from 'sweetalert2'
 
 const ItemDetail = ({id ,nombre, talles, precio, categoria, img, stock}) => {
 
-    const[quantity, setQuantity] = useState(0)
-
-    const[talle, setTalle] = useState("")
+    const [quantity, setQuantity] = useState(0)
+    const [talle, setTalle] = useState("")
  
     const { addItem } = useCart()
 
@@ -17,7 +16,9 @@ const ItemDetail = ({id ,nombre, talles, precio, categoria, img, stock}) => {
         const inputTalle = talle
 
         if (inputTalle === "") {
-            sweetAlert()
+            sinTalle()
+        } else if (stock === 0) {
+            sinStock()
         } else {
             const objProductToAdd = {
                 id, nombre, precio, quantity, talle
@@ -31,12 +32,19 @@ const ItemDetail = ({id ,nombre, talles, precio, categoria, img, stock}) => {
         setTalle(e.target.value)
     }
 
-    const sweetAlert = () => {
+    const sinTalle = () => {
         Swal.fire({
             text: "No se puede agregar el producto al carrito sin haber puesto un talle!",
             icon: "warning" 
         })
     } 
+
+    const sinStock = () => {
+        Swal.fire({
+            text:"No hay stock del producto",
+            icon: "error"
+        })
+    }
 
     return (
         <div className={clases.divItemDetail}>
