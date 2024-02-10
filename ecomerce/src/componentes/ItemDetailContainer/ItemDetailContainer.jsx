@@ -1,25 +1,25 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { db } from '../../services/firebase/firebaseConfig'
-import { getDoc, doc } from "firebase/firestore"
 import ItemDetail from '../ItemDetail/ItemDetail'
 import clases from '../ItemDetail/ItemDetail.module.css'
+import { getProductById } from '../../services/firebase/firestore/product'
+import { useAsync } from '../../hooks/useAsync'
 
 const ItemDetailContainer = () => {
-    const [producto, setProduct] = useState([])
+    // const [producto, setProduct] = useState([])
 
     const {productoId} = useParams([])
 
-    useEffect(() => {
-        const productoDoc = doc(db, 'productos', productoId)
+    const asyncFunction = () => getProductById(productoId)
 
-        getDoc(productoDoc)
-            .then(queryDocumentSnapshot => {
-                const campos = queryDocumentSnapshot.data()
-                const productoAdaptado = { id: queryDocumentSnapshot.id, ...campos}
-                setProduct(productoAdaptado)
-            })
-    }, [productoId])
+    const { data: producto } = useAsync(asyncFunction, [productoId])
+
+    // useEffect(() => {
+    //     getProductById(productoId)
+    //         .then(productos => {
+    //             setProduct(productos)
+    //         })
+    // }, [productoId])
 
     if(!producto) {
         return <h1>El producto no existe</h1>
