@@ -15,16 +15,17 @@ const ItemDetail = ({id ,nombre, talles, precio, categoria, img, stock}) => {
     const handleOnAdd = (quantity) => {
         const inputTalle = talle
 
-        if (inputTalle === "") {
+        if (stock === 0) {
+            sinStock()  
+        } else if (inputTalle === "") {
             sinTalle()
-        } else if (stock === 0) {
-            sinStock()
         } else {
             const objProductToAdd = {
                 id, nombre, precio, quantity, talle
             }
             addItem(objProductToAdd)
             setQuantity(quantity) 
+            prodAgregado()     
         }
     }
 
@@ -41,9 +42,19 @@ const ItemDetail = ({id ,nombre, talles, precio, categoria, img, stock}) => {
 
     const sinStock = () => {
         Swal.fire({
-            text:"No hay stock del producto",
+            text:"No hay stock del producto!",
             icon: "error"
         })
+    }
+
+    const prodAgregado = () => {
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Producto agregado al carrito!",
+            showConfirmButton: false,
+            timer: 1500
+        });
     }
 
     return (
@@ -58,12 +69,11 @@ const ItemDetail = ({id ,nombre, talles, precio, categoria, img, stock}) => {
                 <h4 className={clases.divItemDetailPrecio}>${precio}</h4>
                 {
                     quantity === 0 ? (
-                        <ItemCount stock={stock} onAdd={handleOnAdd}/>  
+                        <ItemCount stock={stock} onAdd={handleOnAdd} />  
                     ) : (
                         <div className={clases.divBtnComprar}>
                             <Link className={clases.btnComprar} to={'/Cart'}>Finalizar compra</Link>                            
                         </div>
-
                     )
                 }
             </div>
